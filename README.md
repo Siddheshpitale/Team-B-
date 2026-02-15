@@ -306,18 +306,22 @@ This project demonstrates:
 ## 📝 Project Structure
 
 ```
-pykv/
+PyKV/
 ├── app.py                 # Flask application with TTL routes
 ├── storage/
 │   ├── memory_store.py    # In-memory storage with TTL support
 │   ├── persistence.py     # JSON persistence layer
-│   └── __init__.py
+│   ├── __init__.py
+│   └── __pycache__/
 ├── templates/
 │   ├── home.html          # Landing page
 │   └── dashboard.html     # Main dashboard with TTL UI
 ├── static/
 │   ├── style.css          # Animated styles
 │   └── script.js          # TTL operations
+├── database/
+│   ├── kv_store.db
+│   └── pykv.db        
 ├── data.json              # Persistent storage
 └── README.md              # This file
 ```
