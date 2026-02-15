@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KV Store Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="particles"></div>
+
+<div class="container">
+
+    <!-- Heading -->
+    <div class="heading-center">
+        <h1 class="title">INFOSYS INTERNSHIP (BATCH 13)</h1>
+        <h2 class="subtitle">AI Powered Key-Value Store with TTL</h2>
+    </div>
+
+    <!-- Statistics Section -->
+    <div class="stats-section">
+        <button onclick="showStats()" class="stats-btn">📊 Show Statistics</button>
+    </div>
+
+    <!-- Operations Section -->
+    <div class="operations-row">
+
+        <div class="card">
+            <h3>📥 PUT</h3>
+            <input type="text" id="putKey" placeholder="Enter Key">
+            <input type="text" id="putValue" placeholder="Enter Value">
+            <input type="number" id="putTTL" placeholder="TTL (seconds) - optional">
+            <button onclick="putData()">PUT</button>
+        </div>
+
+        <div class="card">
+            <h3>📤 GET</h3>
+            <input type="text" id="getKey" placeholder="Enter Key">
+            <button onclick="getData()">GET</button>
+        </div>
+
+        <div class="card">
+            <h3>🗑️ DELETE</h3>
+            <input type="text" id="deleteKey" placeholder="Enter Key">
+            <button onclick="deleteData()">DELETE</button>
+        </div>
+
+    </div>
+
+    <!-- TTL Operations Row -->
+    <div class="operations-row" style="margin-top: 30px;">
+
+        <div class="card">
+            <h3>⏱️ EXPIRE</h3>
+            <input type="text" id="expireKey" placeholder="Enter Key">
+            <input type="number" id="expireSeconds" placeholder="Seconds">
+            <button onclick="expireKey()">SET EXPIRE</button>
+        </div>
+
+        <div class="card">
+            <h3>⏰ TTL</h3>
+            <input type="text" id="ttlKey" placeholder="Enter Key">
+            <button onclick="checkTTL()">CHECK TTL</button>
+        </div>
+
+        <div class="card">
+            <h3>♾️ PERSIST</h3>
+            <input type="text" id="persistKey" placeholder="Enter Key">
+            <button onclick="persistKey()">REMOVE EXPIRE</button>
+        </div>
+
+    </div>
+
+    <div class="show-section">
+        <button class="show-btn" onclick="showAll()">SHOW ALL</button>
+    </div>
+
+    <div class="output" id="output">Welcome to PyKV Store! 🚀</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
