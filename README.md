@@ -308,6 +308,11 @@ This project demonstrates:
 ```
 PyKV/
 ├── app.py                 # Flask application with TTL routes
+├── pykv/
+│   ├── config.py
+│   ├── requirements.txt
+│   └── __pycache__/
+│                
 ├── storage/
 │   ├── memory_store.py    # In-memory storage with TTL support
 │   ├── persistence.py     # JSON persistence layer
