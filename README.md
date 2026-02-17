@@ -1,5 +1,7 @@
 # PyKV - Scalable In-Memory Key-Value Store with TTL Support and Persistence
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **Infosys Internship Project - Batch 11**
 
 A high-performance, persistent key-value store with automatic expiration (TTL) support, built with Python and Flask.
